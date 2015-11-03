@@ -3,6 +3,8 @@
 *  Edwin Bedoya
 *  Comparamos que la cadena de caracteres dada sea una secuencia de ADN de 3 caracteres
 *  Nota: Se estara implementado un metodo para los caracteres respetidos
+* https://github.com/juanse962/Proyecto
+* https://es.wikipedia.org/wiki/Ley_de_Chargaff (Ley de Chargaf)
 **/
 using System;
       public class Proyecto
@@ -12,38 +14,31 @@ using System;
             static void Main(string[] args)
 
             {
+              int count1 = 0;
+              int count2 = 0;
                   string cadena;
                   Console.WriteLine("Escribe la cadena");
                   cadena = Console.ReadLine();
                   cadena.ToUpper();
                    int longitud = cadena.Length;
                     if (longitud >= 3){
-                    for(int i=0; i<cadena.Length-1; i++){
-                    //  Console.WriteLine("I {0}",i);
-                        switch(cadena[i]) {
-                              case 'T':
-                                    if  (cadena[i+1]== 'G' || cadena[i+1]== 'C' || cadena[i+1]== 'A') {
-                                  }
-                                  else {
-                                    Console.WriteLine("La cadena no es correcta");
-                                      break;
-                                  }
-                                    break;
-                              case 'A':
-                              if  (cadena[i+1]== 'G' || cadena[i+1]== 'C' || cadena[i+1]== 'T') {
+                    for(int i=0; i<=cadena.Length-1; i++){
+                    Console.WriteLine(i);
 
-                               }
-                               else {
-                                 Console.WriteLine("La cadena no es correcta");
-                                   break;
-                               }
-                              break;
-                        }
-                    }
+                     if ((cadena[i] == 'T') ||(cadena[i] == 'C')){
+                       count1 ++;
+                     if ((cadena[i] == 'G') ||(cadena[i] == 'A')){
+                       count2 ++;
+                     }
+                     }
+                 }
+                  }
 
-                  }
-                  else {
-                    Console.WriteLine("La cadena no es correcta");
-                  }
+
+                if (count2 != count1) {
+                  Console.WriteLine("La cadena es correcta");
+                }else {
+                  Console.WriteLine("La cadena no es correcta");
                 }
             }
+          }
