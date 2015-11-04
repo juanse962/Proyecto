@@ -23,7 +23,6 @@ using System;
                    int longitud = cadena.Length;
                     if (longitud >= 3){
                     for(int i=0; i<=cadena.Length-1; i++){
-                    Console.WriteLine(i);
 
                      if ((cadena[i] == 'T') ||(cadena[i] == 'C')){
                        count1 ++;
